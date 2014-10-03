@@ -1,0 +1,18 @@
+{
+  "name": "parseLine",
+  "description": "Example for interview test",
+  "author": {
+    "name": "Luke Dyson",
+    "email": "git@flyinganvil.co.uk",
+    "url": "http://www.flyinganvil.co.uk/"
+  },
+  "dependencies": {
+    "tail": "0.4.0",
+    "node-persist": "0.0.2"
+  },
+  "devDependencies": {
+    "chai": "^1.9.2",
+    "mocha": "^1.21.4",
+    "sinon": "^1.10.3"
+  }
+}
