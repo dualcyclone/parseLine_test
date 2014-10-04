@@ -21,6 +21,12 @@ describe('parseLine()', function () {
 	});
 
 	describe('Will filter access log input', function () {
+		it('Will ignore invalid log entry attempts', function() {
+			expect(storage.getItem('accessLog')).to.eql({});
+			expect(parseLine('invalid log entry')).to.equal(null);
+			expect(storage.getItem('accessLog')).to.eql({});
+		});
+		
 		it('Should ignore successful login attempts', function () {
 			expect(storage.getItem('accessLog')).to.eql({});
 			expect(parseLine('80.238.9.179,' + Date.now() + ',SIGNIN_SUCCESS,Dave.Branning')).to.equal(null);
